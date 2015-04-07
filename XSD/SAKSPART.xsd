@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="SAKSPART.TAB" type="SAKSPART.TAB" />
+  <xs:complexType name="SAKSPART.TAB">
+    <xs:sequence>
+      <xs:element name="SAKSPART" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SP.SAID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="SP.U1" type="simple_bool" minOccurs="1" />
+              <xs:element name="SP.KORTNAVN" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="SP.NAVN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="SP.ADRESSE" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="SP.POSTNR" type="simple_varchar_5" minOccurs="0" />
+              <xs:element name="SP.POSTSTED" type="simple_varchar_60" minOccurs="0" />
+              <xs:element name="SP.UTLAND" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="SP.EPOSTADR" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="SP.KONTAKT" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="SP.ROLLE" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="SP.FAKS" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="SP.TLF" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="SP.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

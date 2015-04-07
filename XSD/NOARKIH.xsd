@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur"
+  elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="NOARK.IH" type="NOARK.IH" />
+  <xs:complexType name="NOARK.IH">
+    <xs:sequence>
+      <xs:element name="EKSPORTINFO" type="IH_EKSPORTINFO" />
+      <xs:element name="TABELLINFO" type="IH_TABELLINFO" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="VERSJON" fixed="1.0" />
+  </xs:complexType>
+  <xs:complexType name="IH_EKSPORTINFO">
+    <xs:sequence>
+      <xs:element name="EI.ARKSKAPER" type="simple_varchar_70" />
+      <xs:element name="EI.SYSTEMNAVN" type="simple_varchar_70" />
+      <xs:element name="EI.ORGNR" type="simple_int_15" minOccurs="0" />
+      <xs:element name="EI.KOMMUNE" type="simple_int_4" minOccurs="0" />
+      <xs:element name="EI.BASEID" type="simple_int_10" minOccurs="0" />
+      <xs:element name="EI.MERKNAD" type="simple_text" minOccurs="0" />
+      <xs:element name="EI.FRADATO" type="simple_date" />
+      <xs:element name="EI.TILDATO" type="simple_date" />
+      <xs:element name="EI.PRODDATO" type="simple_date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IH_TABELLINFO">
+    <xs:sequence>
+      <xs:element name="TI.TABELL" type="simple_varchar_30" />
+      <xs:element name="ATTRIBUTTER" type="IH_ATTRIBUTTER" />
+      <xs:element name="TI.TABMERKNAD" type="simple_text" minOccurs="0" />
+      <xs:element name="TI.ANTFILER" type="simple_int_3" />
+      <xs:element name="FIL" type="IH_FIL" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IH_ATTRIBUTTER">
+    <xs:sequence>
+      <xs:element name="TI.ATTR" type="simple_varchar_30" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IH_FIL">
+    <xs:sequence>
+      <xs:element name="TI.FILNAVN" type="simple_varchar_70" />
+      <xs:element name="TI.FILDEL" type="simple_int_3" minOccurs="0" />
+      <xs:element name="TI.ANTPOSTER" type="simple_int_10" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

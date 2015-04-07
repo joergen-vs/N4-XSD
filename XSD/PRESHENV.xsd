@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="PRESHENV.TAB" type="PRESHENV.TAB" />
+  <xs:complexType name="PRESHENV.TAB">
+    <xs:sequence>
+      <xs:element name="PRESHENV" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PH.FPSID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="PH.TPSID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PH.TOVEIS" type="simple_bool" minOccurs="1" />
+              <xs:element name="PH.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

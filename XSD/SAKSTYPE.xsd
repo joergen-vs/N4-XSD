@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="SAKSTYPE.TAB" type="SAKSTYPE.TAB" />
+  <xs:complexType name="SAKSTYPE.TAB">
+    <xs:sequence>
+      <xs:element name="SAKSTYPE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="ST.TYPE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="ST.BETEGN" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="ST.UTVSAKTYPE" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="ST.UOFF" type="simple_bool" minOccurs="1" />
+              <xs:element name="ST.HJEMMEL" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="ST.KLAGEADG" type="simple_bool" minOccurs="1" />
+              <xs:element name="ST.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

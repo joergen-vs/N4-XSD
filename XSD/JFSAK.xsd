@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="JFSAK.TAB" type="JFSAK.TAB" />
+  <xs:complexType name="JFSAK.TAB">
+    <xs:sequence>
+      <xs:element name="JFSAK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="JF.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="JF.FSAID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="JF.FJPID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="JF.TSAID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="JF.TJPID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="JF.TPSID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="JF.MERKNAD" type="simple_varchar_255" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ENHETSTYPE.TAB" type="ENHETSTYPE.TAB" />
+  <xs:complexType name="ENHETSTYPE.TAB">
+    <xs:sequence>
+      <xs:element name="ENHETSTYPE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="ET.KODE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="ET.UNDEREN" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="ET.LTEKST" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="ET.BETEGN" type="simple_varchar_70" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

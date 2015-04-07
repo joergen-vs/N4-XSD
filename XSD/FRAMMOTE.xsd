@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="FRAMMOTE.TAB" type="FRAMMOTE.TAB" />
+  <xs:complexType name="FRAMMOTE.TAB">
+    <xs:sequence>
+      <xs:element name="FRAMMOTE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FU.MOID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="FU.PNID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="FU.SORT" type="simple_int_3" minOccurs="1" />
+              <xs:element name="FU.FUNK" type="simple_varchar_10" minOccurs="1" />
+            <xs:element name="FU.VARAFOR" type="simple_int_10" minOccurs="0" />
+              <xs:element name="FU.SEKR" type="simple_bool" minOccurs="1" />
+              <xs:element name="FU.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

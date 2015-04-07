@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="EKSTSAKREF.TAB" type="EKSTSAKREF.TAB" />
+  <xs:complexType name="EKSTSAKREF.TAB">
+    <xs:sequence>
+      <xs:element name="EKSTSAKREF" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ER.JPID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="ER.ASAAR" type="simple_int_4" minOccurs="1" />
+            <xs:element name="ER.ASNR" type="simple_int_6" minOccurs="1" />
+            <xs:element name="ER.ABASEID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="ER.AJPID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="ER.REF" type="simple_varchar_70" minOccurs="0" />
+            <xs:element name="ER.ADMID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="ER.ADMBET" type="simple_varchar_70" minOccurs="0" />
+            <xs:element name="ER.SBHID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="ER.SBHNAVN" type="simple_varchar_30" minOccurs="0" />
+              <xs:element name="ER.SBHINIT" type="simple_varchar_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

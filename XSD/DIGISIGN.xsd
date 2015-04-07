@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="DIGISIGN.TAB" type="DIGISIGN.TAB" />
+  <xs:complexType name="DIGISIGN.TAB">
+    <xs:sequence>
+      <xs:element name="DIGISIGN" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DI.DOKID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="DI.VERSJON" type="simple_int_5" minOccurs="1" />
+              <xs:element name="DI.VARIANT" type="simple_varchar_2" minOccurs="1" />
+            <xs:element name="DI.SIGNNR" type="simple_int_4" minOccurs="1" />
+              <xs:element name="DI.DOKSIGN" type="simple_bool" minOccurs="1" />
+              <xs:element name="DI.ARKSIGN" type="simple_bool" minOccurs="1" />
+              <xs:element name="DI.FORSIGN" type="simple_bool" minOccurs="1" />
+            <xs:element name="DI.SIGVERAV" type="simple_int_10" minOccurs="1" />
+              <xs:element name="DI.SIGVERDATO" type="simple_date" minOccurs="1" />
+              <xs:element name="DI.SIGNTEKST" type="simple_text" minOccurs="1" />
+              <xs:element name="DI.SIGNATUR" type="simple_blob" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

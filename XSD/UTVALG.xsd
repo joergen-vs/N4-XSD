@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVALG.TAB" type="UTVALG.TAB" />
+  <xs:complexType name="UTVALG.TAB">
+    <xs:sequence>
+      <xs:element name="UTVALG" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UT.ID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="UT.KODE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="UT.NAVN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="UT.BESKR" type="simple_text" minOccurs="0" />
+              <xs:element name="UT.TYPE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="UT.ADMID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="UT.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="UT.TILDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="UT.OPPNAV" type="simple_int_10" minOccurs="0" />
+            <xs:element name="UT.OPPNAVUTV" type="simple_int_10" minOccurs="0" />
+              <xs:element name="UT.OPPNDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="UT.ANTMEDL" type="simple_int_3" minOccurs="0" />
+              <xs:element name="UT.ETABLERT" type="simple_date" minOccurs="0" />
+              <xs:element name="UT.NEDLAGT" type="simple_date" minOccurs="0" />
+              <xs:element name="UT.ARKDEL" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="UT.ARKKODE" type="simple_varchar_70" minOccurs="0" />
+            <xs:element name="UT.ADRID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="UT.MONUMSER" type="simple_int_10" minOccurs="1" />
+              <xs:element name="UT.MOTEFORM" type="simple_varchar_30" minOccurs="0" />
+              <xs:element name="UT.SAMMENR" type="simple_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

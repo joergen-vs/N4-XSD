@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVMEDLFUNK.TAB" type="UTVMEDLFUNK.TAB" />
+  <xs:complexType name="UTVMEDLFUNK.TAB">
+    <xs:sequence>
+      <xs:element name="UTVMEDLFUNK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="MK.KODE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="MK.BETEGN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="MK.TALE" type="simple_bool" minOccurs="0" />
+              <xs:element name="MK.MEDLEM" type="simple_bool" minOccurs="0" />
+              <xs:element name="MK.SEKR" type="simple_bool" minOccurs="0" />
+              <xs:element name="MK.FMKODE" type="simple_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="NOARKSAK.TAB" type="NOARKSAK.TAB" />
+  <xs:complexType name="NOARKSAK.TAB">
+    <xs:sequence>
+      <xs:element name="NOARKSAK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SA.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="SA.SAAR" type="simple_int_4" minOccurs="1" />
+            <xs:element name="SA.SEKNR" type="simple_int_6" minOccurs="1" />
+              <xs:element name="SA.PAPIR" type="simple_bool" minOccurs="0" />
+              <xs:element name="SA.DATO" type="simple_date" minOccurs="1" />
+              <xs:element name="SA.TITTEL" type="simple_varchar_255" minOccurs="1" />
+              <xs:element name="SA.U1" type="simple_bool" minOccurs="1" />
+              <xs:element name="SA.STATUS" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="SA.ARKDEL" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="SA.TYPE" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="SA.JENHET" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="SA.OPSAKSDEL" type="simple_varchar_10" minOccurs="0" />
+            <xs:element name="SA.ADMID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="SA.ANSVID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="SA.TGKODE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="SA.UOFF" type="simple_varchar_70" minOccurs="0" />
+            <xs:element name="SA.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+              <xs:element name="SA.SISTEJP" type="simple_date" minOccurs="0" />
+            <xs:element name="SA.ANTJP" type="simple_int_4" minOccurs="1" />
+            <xs:element name="SA.BEVTID" type="simple_int_2" minOccurs="0" />
+              <xs:element name="SA.KASSKODE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="SA.KASSDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="SA.PROSJEKT" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="SA.PRES" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="SA.OBS" type="simple_date" minOccurs="0" />
+              <xs:element name="SA.FRARKDEL" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="SA.UTLDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="SA.UTLTIL" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

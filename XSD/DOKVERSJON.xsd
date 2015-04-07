@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="DOKVERSJON.TAB" type="DOKVERSJON.TAB" />
+  <xs:complexType name="DOKVERSJON.TAB">
+    <xs:sequence>
+      <xs:element name="DOKVERSJON" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="VE.DOKID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="VE.VERSJON" type="simple_int_5" minOccurs="1" />
+              <xs:element name="VE.VARIANT" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="VE.AKTIV" type="simple_bool" minOccurs="1" />
+              <xs:element name="VE.DOKFORMAT" type="simple_varchar_10" minOccurs="1" />
+            <xs:element name="VE.REGAV" type="simple_int_10" minOccurs="0" />
+              <xs:element name="VE.OPPBEDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="VE.TGKODE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="VE.ARKMERK" type="simple_text" minOccurs="0" />
+              <xs:element name="VE.LAGRENH" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="VE.FILREF" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

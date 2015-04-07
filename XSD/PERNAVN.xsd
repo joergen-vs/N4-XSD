@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="PERNAVN.TAB" type="PERNAVN.TAB" />
+  <xs:complexType name="PERNAVN.TAB">
+    <xs:sequence>
+      <xs:element name="PERNAVN" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PN.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="PN.PEID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PN.AKTIV" type="simple_bool" minOccurs="1" />
+              <xs:element name="PN.INIT" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="PN.NAVN" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="PN.FORNAVN" type="simple_varchar_30" minOccurs="0" />
+              <xs:element name="PN.MNAVN" type="simple_varchar_30" minOccurs="0" />
+              <xs:element name="PN.ENAVN" type="simple_varchar_30" minOccurs="0" />
+              <xs:element name="PN.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PN.TILDATO" type="simple_date" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

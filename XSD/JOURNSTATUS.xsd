@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="JOURNSTATUS.TAB" type="JOURNSTATUS.TAB" />
+  <xs:complexType name="JOURNSTATUS.TAB">
+    <xs:sequence>
+      <xs:element name="JOURNSTATUS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="JS.STATUS" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="JS.BETEGN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="JS.ANSVAR" type="simple_varchar_1" minOccurs="0" />
+              <xs:element name="JS.DOKKONTR" type="simple_varchar_1" minOccurs="0" />
+              <xs:element name="JS.EKSPEDERT" type="simple_bool" minOccurs="0" />
+              <xs:element name="JS.FORARKIV" type="simple_bool" minOccurs="0" />
+              <xs:element name="JS.FORLEDER" type="simple_bool" minOccurs="0" />
+              <xs:element name="JS.FORSAKSBEH" type="simple_bool" minOccurs="0" />
+              <xs:element name="JS.FOREKST" type="simple_bool" minOccurs="0" />
+              <xs:element name="JS.FORINT" type="simple_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="STATUSMDOK.TAB" type="STATUSMDOK.TAB" />
+  <xs:complexType name="STATUSMDOK.TAB">
+    <xs:sequence>
+      <xs:element name="STATUSMDOK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="MS.STATUS" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="MS.BETEGN" type="simple_varchar_70" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

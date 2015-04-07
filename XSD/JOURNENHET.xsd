@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="JOURNENHET.TAB" type="JOURNENHET.TAB" />
+  <xs:complexType name="JOURNENHET.TAB">
+    <xs:sequence>
+      <xs:element name="JOURNENHET" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="JE.JENHET" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="JE.BETEGN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="JE.LOK" type="simple_text" minOccurs="0" />
+              <xs:element name="JE.JSARKIV1" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="JE.JSARKIV2" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="JE.JSSAKSBH1" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="JE.JSSAKSBH2" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="JE.RPGRUPPE" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="JE.TILDATO" type="simple_date" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ADRESSEKP.TAB" type="ADRESSEKP.TAB" />
+  <xs:complexType name="ADRESSEKP.TAB">
+    <xs:sequence>
+      <xs:element name="ADRESSEKP" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AK.ADRID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="AK.OVERORD" type="simple_int_10" minOccurs="0" />
+              <xs:element name="AK.TYPE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="AK.ADRGRUPPE" type="simple_bool" minOccurs="0" />
+              <xs:element name="AK.KORTNAVN" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="AK.NAVN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="AK.POSTADR" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="AK.POSTNR" type="simple_varchar_5" minOccurs="0" />
+              <xs:element name="AK.POSTSTED" type="simple_varchar_60" minOccurs="0" />
+              <xs:element name="AK.UTLAND" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="AK.EPOST" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="AK.FAKS" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="AK.TLF" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="AK.MOBIL" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="AK.PERSOK" type="simple_varchar_20" minOccurs="0" />
+              <xs:element name="AK.TILDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="AK.ORGNR" type="simple_varchar_20" minOccurs="0" />
+            <xs:element name="AK.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+            <xs:element name="AK.OPDGRUPPE" type="simple_int_10" minOccurs="0" />
+            <xs:element name="AK.BASEID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="AK.REGEPOST" type="simple_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="MERKNAD.TAB" type="MERKNAD.TAB" />
+  <xs:complexType name="MERKNAD.TAB">
+    <xs:sequence>
+      <xs:element name="MERKNAD" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ME.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="ME.SAID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="ME.JPID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="ME.DOKID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="ME.DOKVER" type="simple_int_5" minOccurs="0" />
+              <xs:element name="ME.VARIANT" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="ME.RNR" type="simple_int_6" minOccurs="0" />
+              <xs:element name="ME.ITYPE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="ME.TGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="ME.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+              <xs:element name="ME.OPPBEDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="ME.REGDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="ME.REGKL" type="simple_time" minOccurs="0" />
+            <xs:element name="ME.REGAV" type="simple_int_10" minOccurs="1" />
+            <xs:element name="ME.PVGAV" type="simple_int_10" minOccurs="1" />
+              <xs:element name="ME.TEKST" type="simple_text" minOccurs="0" />
+            <xs:element name="ME.REFDOKID" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

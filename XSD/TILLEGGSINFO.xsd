@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="TILLEGGSINFO.TAB" type="TILLEGGSINFO.TAB" />
+  <xs:complexType name="TILLEGGSINFO.TAB">
+    <xs:sequence>
+      <xs:element name="TILLEGGSINFO" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TI.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="TI.SAID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="TI.JPID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="TI.DOKID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="TI.DOKVER" type="simple_int_5" minOccurs="0" />
+              <xs:element name="TI.VARIANT" type="simple_varchar_5" minOccurs="0" />
+            <xs:element name="TI.RNR" type="simple_int_6" minOccurs="0" />
+              <xs:element name="TI.ITYPE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="TI.TGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="TI.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+              <xs:element name="TI.OPPBEDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="TI.REGDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="TI.REGKL" type="simple_time" minOccurs="0" />
+            <xs:element name="TI.REGAV" type="simple_int_10" minOccurs="1" />
+            <xs:element name="TI.PVGAV" type="simple_int_10" minOccurs="1" />
+              <xs:element name="TI.TEKST" type="simple_text" minOccurs="0" />
+            <xs:element name="TI.REFDOKID" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

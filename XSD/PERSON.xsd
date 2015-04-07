@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="PERSON.TAB" type="PERSON.TAB" />
+  <xs:complexType name="PERSON.TAB">
+    <xs:sequence>
+      <xs:element name="PERSON" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PE.ID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PE.BRUKERID" type="simple_varchar_30" minOccurs="0" />
+              <xs:element name="PE.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PE.TILDATO" type="simple_date" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

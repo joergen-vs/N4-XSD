@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ARKIVPERIODE.TAB" type="ARKIVPERIODE.TAB" />
+  <xs:complexType name="ARKIVPERIODE.TAB">
+    <xs:sequence>
+      <xs:element name="ARKIVPERIODE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="AP.ARKIV" type="simple_varchar_10" minOccurs="1" />
+            <xs:element name="AP.PERIODE" type="simple_int_5" minOccurs="1" />
+              <xs:element name="AP.STATUS" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="AP.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="AP.TILDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="AP.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

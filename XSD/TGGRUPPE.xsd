@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="TGGRUPPE.TAB" type="TGGRUPPE.TAB" />
+  <xs:complexType name="TGGRUPPE.TAB">
+    <xs:sequence>
+      <xs:element name="TGGRUPPE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TG.GRUPPEID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="TG.GRUPPENAVN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="TG.GENERELL" type="simple_bool" minOccurs="1" />
+            <xs:element name="TG.OPPRAV" type="simple_int_10" minOccurs="1" />
+              <xs:element name="TG.FRADATO" type="simple_date" minOccurs="1" />
+              <xs:element name="TG.TILDATO" type="simple_date" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

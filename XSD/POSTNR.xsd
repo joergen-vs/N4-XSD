@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="POSTNR.TAB" type="POSTNR.TAB" />
+  <xs:complexType name="POSTNR.TAB">
+    <xs:sequence>
+      <xs:element name="POSTNR" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="PO.POSTNR" type="simple_varchar_5" minOccurs="1" />
+              <xs:element name="PO.POSTSTED" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="PO.OPRDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PO.NEDLDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PO.KOMNR" type="simple_varchar_4" minOccurs="0" />
+              <xs:element name="PO.KOMMUNE" type="simple_varchar_70" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

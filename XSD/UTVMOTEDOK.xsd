@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVMOTEDOK.TAB" type="UTVMOTEDOK.TAB" />
+  <xs:complexType name="UTVMOTEDOK.TAB">
+    <xs:sequence>
+      <xs:element name="UTVMOTEDOK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MD.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="MD.UTVID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="MD.MOID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="MD.DOKTYPE" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="MD.REGDATO" type="simple_date" minOccurs="1" />
+              <xs:element name="MD.STATUS" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="MD.ARKKODE" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="MD.PAPIRDOK" type="simple_bool" minOccurs="1" />
+              <xs:element name="MD.INNHOLD" type="simple_text" minOccurs="1" />
+              <xs:element name="MD.U1" type="simple_bool" minOccurs="0" />
+            <xs:element name="MD.ADMID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="MD.SBHID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="MD.TGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="MD.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+              <xs:element name="MD.UOFF" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="MD.AGDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="MD.AGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="MD.BEVTID" type="simple_int_4" minOccurs="0" />
+              <xs:element name="MD.KASSDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="MD.KASSKODE" type="simple_varchar_2" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

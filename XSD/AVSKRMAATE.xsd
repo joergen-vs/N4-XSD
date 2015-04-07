@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="AVSKRMAATE.TAB" type="AVSKRMAATE.TAB" />
+  <xs:complexType name="AVSKRMAATE.TAB">
+    <xs:sequence>
+      <xs:element name="AVSKRMAATE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="AV.KODE" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="AV.BETEGN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="AV.MIDLERTID" type="simple_bool" minOccurs="1" />
+              <xs:element name="AV.BESVART" type="simple_bool" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVBEHANDLING.TAB" type="UTVBEHANDLING.TAB" />
+  <xs:complexType name="UTVBEHANDLING.TAB">
+    <xs:sequence>
+      <xs:element name="UTVBEHANDLING" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UB.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="UB.UTSAKID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="UB.RFOLGE" type="simple_int_3" minOccurs="1" />
+            <xs:element name="UB.MOID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="UB.USEKNR" type="simple_int_5" minOccurs="0" />
+            <xs:element name="UB.AAR" type="simple_int_4" minOccurs="0" />
+              <xs:element name="UB.BEHSTATUS" type="simple_varchar_2" minOccurs="1" />
+            <xs:element name="UB.ADMID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="UB.SBHID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="UB.PROTOKOLL" type="simple_bool" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

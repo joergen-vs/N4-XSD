@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="KPAUTORIS.TAB" type="KPAUTORIS.TAB" />
+  <xs:complexType name="KPAUTORIS.TAB">
+    <xs:sequence>
+      <xs:element name="KPAUTORIS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="KA.ADRID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="KA.TGKODE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="KA.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="KA.TILDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="KA.AUTAV" type="simple_int_10" minOccurs="0" />
+              <xs:element name="KA.DATE" type="simple_date" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

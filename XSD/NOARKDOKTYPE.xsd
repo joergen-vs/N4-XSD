@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="NOARKDOKTYPE.TAB" type="NOARKDOKTYPE.TAB" />
+  <xs:complexType name="NOARKDOKTYPE.TAB">
+    <xs:sequence>
+      <xs:element name="NOARKDOKTYPE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="ND.DOKTYPE" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="ND.BETEGN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="ND.EKSTPROD" type="simple_bool" minOccurs="0" />
+              <xs:element name="ND.INTMOT" type="simple_varchar_1" minOccurs="0" />
+              <xs:element name="ND.EKSTMOT" type="simple_varchar_1" minOccurs="0" />
+              <xs:element name="ND.OPPF" type="simple_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

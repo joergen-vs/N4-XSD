@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVMEDLEM.TAB" type="UTVMEDLEM.TAB" />
+  <xs:complexType name="UTVMEDLEM.TAB">
+    <xs:sequence>
+      <xs:element name="UTVMEDLEM" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UM.UTVID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="UM.PNID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="UM.RANGERING" type="simple_int_3" minOccurs="1" />
+            <xs:element name="UM.VARAFOR" type="simple_int_10" minOccurs="0" />
+              <xs:element name="UM.FUNK" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="UM.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="UM.TILDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="UM.SORT" type="simple_int_3" minOccurs="0" />
+              <xs:element name="UM.VARIGHET" type="simple_varchar_70" minOccurs="0" />
+            <xs:element name="UM.REPRES" type="simple_int_10" minOccurs="0" />
+              <xs:element name="UM.SEKR" type="simple_bool" minOccurs="0" />
+              <xs:element name="UM.MEDLEM" type="simple_bool" minOccurs="0" />
+              <xs:element name="UM.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

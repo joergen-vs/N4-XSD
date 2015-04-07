@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ROLLE.TAB" type="ROLLE.TAB" />
+  <xs:complexType name="ROLLE.TAB">
+    <xs:sequence>
+      <xs:element name="ROLLE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RO.ROLLEID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="RO.NAVN" type="simple_varchar_30" minOccurs="1" />
+              <xs:element name="RO.SOK" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.SYSADM" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.ARKLEDER" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.LEDER" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.SAKSBH" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.UTVSEKR" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.REGUTVMED" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.DRIFT" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.REGROLLER" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.AUT" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.TILDELROL" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.REGADM" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.REGPERSON" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.REGARK" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.REGADR" type="simple_bool" minOccurs="1" />
+              <xs:element name="RO.NYSAK" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ESANSV" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.EKLASS" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ETKLASS" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ESSTAT" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.FLYTTJP" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.NYJPOSTI" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.NYJPOSTE" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ESBH" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.AVSKRIV" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.EKSPDOK" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ESDEL" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.EFRIST" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ETILG" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.TEDOK" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ARKKON" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.RMERKN" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="RO.ARKLOGG" type="simple_varchar_1" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

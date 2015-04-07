@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="JOURNPOST.TAB" type="JOURNPOST.TAB" />
+  <xs:complexType name="JOURNPOST.TAB">
+    <xs:sequence>
+      <xs:element name="JOURNPOST" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="JP.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="JP.JAAR" type="simple_int_4" minOccurs="1" />
+            <xs:element name="JP.SEKNR" type="simple_int_7" minOccurs="1" />
+            <xs:element name="JP.SAID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="JP.JPOSTNR" type="simple_int_4" minOccurs="1" />
+              <xs:element name="JP.JDATO" type="simple_date" minOccurs="1" />
+              <xs:element name="JP.NDOKTYPE" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="JP.DOKDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="JP.UDATERT" type="simple_bool" minOccurs="1" />
+              <xs:element name="JP.STATUS" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="JP.INNHOLD" type="simple_text" minOccurs="1" />
+              <xs:element name="JP.U1" type="simple_bool" minOccurs="1" />
+              <xs:element name="JP.AVSKDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="JP.EKSPDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="JP.FORFDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="JP.TGKODE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="JP.UOFF" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="JP.OVDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="JP.AGDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="JP.AGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="JP.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+              <xs:element name="JP.SAKSDEL" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="JP.U2" type="simple_bool" minOccurs="0" />
+              <xs:element name="JP.ARKDEL" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="JP.PAPIR" type="simple_bool" minOccurs="0" />
+              <xs:element name="JP.TLKODE" type="simple_varchar_10" minOccurs="0" />
+            <xs:element name="JP.ANTVED" type="simple_int_2" minOccurs="0" />
+              <xs:element name="JP.UTLDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="JP.UTLTIL" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

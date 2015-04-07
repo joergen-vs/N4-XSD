@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="TGMEDLEM.TAB" type="TGMEDLEM.TAB" />
+  <xs:complexType name="TGMEDLEM.TAB">
+    <xs:sequence>
+      <xs:element name="TGMEDLEM" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PG.PEID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="PG.GRUPPEID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="PG.PERROLID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="PG.MEDKOD" type="simple_int_4" minOccurs="0" />
+            <xs:element name="PG.INNMAV" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PG.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PG.TILDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="PG.UTMAV" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

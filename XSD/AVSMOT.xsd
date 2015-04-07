@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="AVSMOT.TAB" type="AVSMOT.TAB" />
+  <xs:complexType name="AVSMOT.TAB">
+    <xs:sequence>
+      <xs:element name="AVSMOT" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AM.ID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="AM.JPID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="AM.IHTYPE" type="simple_bool" minOccurs="1" />
+              <xs:element name="AM.KOPIMOT" type="simple_bool" minOccurs="0" />
+              <xs:element name="AM.BEHANSV" type="simple_bool" minOccurs="0" />
+              <xs:element name="AM.NAVN" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="AM.GRUPPEMOT" type="simple_bool" minOccurs="0" />
+              <xs:element name="AM.GRUPPE" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AM.U1" type="simple_bool" minOccurs="0" />
+              <xs:element name="AM.KORTNAVN" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AM.ADRESSE" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="AM.POSTNR" type="simple_varchar_5" minOccurs="0" />
+              <xs:element name="AM.POSTSTED" type="simple_varchar_60" minOccurs="0" />
+              <xs:element name="AM.UTLAND" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="AM.EPOSTADR" type="simple_varchar_120" minOccurs="0" />
+              <xs:element name="AM.REF" type="simple_varchar_70" minOccurs="0" />
+            <xs:element name="AM.ADMID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="AM.SBHID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="AM.JENHET" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AM.AVSKM" type="simple_varchar_10" minOccurs="0" />
+            <xs:element name="AM.AVSKAV" type="simple_int_10" minOccurs="0" />
+              <xs:element name="AM.AVSKDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="AM.BESVAR" type="simple_int_10" minOccurs="0" />
+              <xs:element name="AM.FRIST" type="simple_date" minOccurs="0" />
+              <xs:element name="AM.FORSEND" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AM.FSSTATUS" type="simple_varchar_2" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

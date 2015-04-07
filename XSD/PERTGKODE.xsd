@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="PERTGKODE.TAB" type="PERTGKODE.TAB" />
+  <xs:complexType name="PERTGKODE.TAB">
+    <xs:sequence>
+      <xs:element name="PERTGKODE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PT.PEID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PT.TGKODE" type="simple_varchar_2" minOccurs="1" />
+            <xs:element name="PT.ADMID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="PT.AUTAV" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PT.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PT.TILDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="PT.AUTOPPAV" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

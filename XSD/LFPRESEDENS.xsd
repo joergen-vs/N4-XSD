@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="LFPRESEDENS.TAB" type="LFPRESEDENS.TAB" />
+  <xs:complexType name="LFPRESEDENS.TAB">
+    <xs:sequence>
+      <xs:element name="LFPRESEDENS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PL.PSID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PL.LOVFORSK" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="PL.PARAGRAF" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="PL.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

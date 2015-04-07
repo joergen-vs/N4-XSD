@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="TGHJEMMEL.TAB" type="TGHJEMMEL.TAB" />
+  <xs:complexType name="TGHJEMMEL.TAB">
+    <xs:sequence>
+      <xs:element name="TGHJEMMEL" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="TH.TGKODE" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="TH.UOFF" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="TH.AGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="TH.AGAAR" type="simple_int_2" minOccurs="0" />
+            <xs:element name="TH.AGDAGER" type="simple_int_3" minOccurs="0" />
+              <xs:element name="TH.ANVEND" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

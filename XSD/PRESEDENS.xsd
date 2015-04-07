@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="PRESEDENS.TAB" type="PRESEDENS.TAB" />
+  <xs:complexType name="PRESEDENS.TAB">
+    <xs:sequence>
+      <xs:element name="PRESEDENS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PS.ID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PS.EKSTERN" type="simple_bool" minOccurs="1" />
+            <xs:element name="PS.SAID" type="simple_int_10" minOccurs="0" />
+            <xs:element name="PS.JPID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="PS.DATO" type="simple_date" minOccurs="0" />
+              <xs:element name="PS.FORELDET" type="simple_bool" minOccurs="1" />
+              <xs:element name="PS.TITTEL" type="simple_text" minOccurs="1" />
+              <xs:element name="PS.TYPE" type="simple_varchar_10" minOccurs="0" />
+            <xs:element name="PS.ADMID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="PS.TGKODE" type="simple_varchar_2" minOccurs="0" />
+            <xs:element name="PS.TGGRUPPE" type="simple_int_10" minOccurs="0" />
+              <xs:element name="PS.UOFF" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="PS.HJEMMEL" type="simple_text" minOccurs="1" />
+              <xs:element name="PS.LOK" type="simple_text" minOccurs="0" />
+            <xs:element name="PS.DOKID" type="simple_int_10" minOccurs="0" />
+              <xs:element name="PS.TEKST" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

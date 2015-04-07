@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ARKIVDEL.TAB" type="ARKIVDEL.TAB" />
+  <xs:complexType name="ARKIVDEL.TAB">
+    <xs:sequence>
+      <xs:element name="ARKIVDEL" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="AD.ARKDEL" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="AD.BETEGN" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="AD.ARKIV" type="simple_varchar_10" minOccurs="1" />
+            <xs:element name="AD.PERIODE" type="simple_int_5" minOccurs="0" />
+              <xs:element name="AD.ASTATUS" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="AD.PRIMNOK" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="AD.SPEFSAK" type="simple_bool" minOccurs="0" />
+              <xs:element name="AD.SPEFDOK" type="simple_bool" minOccurs="0" />
+              <xs:element name="AD.LUKKET" type="simple_bool" minOccurs="0" />
+              <xs:element name="AD.BSPRINS" type="simple_text" minOccurs="0" />
+              <xs:element name="AD.BSKODE" type="simple_varchar_2" minOccurs="0" />
+              <xs:element name="AD.FORTS" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AD.PAPIR" type="simple_bool" minOccurs="0" />
+              <xs:element name="AD.ELDOK" type="simple_bool" minOccurs="0" />
+            <xs:element name="AD.NUMSER" type="simple_int_10" minOccurs="0" />
+              <xs:element name="AD.PRIMKOD" type="simple_varchar_70" minOccurs="0" />
+              <xs:element name="AD.SEKNOK" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AD.FRISEK" type="simple_bool" minOccurs="0" />
+              <xs:element name="AD.RPGRUPPE" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AD.FRADATO" type="simple_date" minOccurs="0" />
+              <xs:element name="AD.TILDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="AD.LOK" type="simple_text" minOccurs="0" />
+              <xs:element name="AD.MERKNAD" type="simple_text" minOccurs="0" />
+              <xs:element name="AD.RAPUTV" type="simple_varchar_10" minOccurs="0" />
+              <xs:element name="AD.EKSPDATO" type="simple_date" minOccurs="0" />
+              <xs:element name="AD.KONTRDATO" type="simple_date" minOccurs="0" />
+            <xs:element name="AD.KONTRAV" type="simple_int_10" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="KLASSERING.TAB" type="KLASSERING.TAB" />
+  <xs:complexType name="KLASSERING.TAB">
+    <xs:sequence>
+      <xs:element name="KLASSERING" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="KL.SAID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="KL.SORT" type="simple_varchar_1" minOccurs="1" />
+              <xs:element name="KL.ORDNPRI" type="simple_varchar_10" minOccurs="1" />
+              <xs:element name="KL.ORDNVER" type="simple_varchar_70" minOccurs="1" />
+              <xs:element name="KL.U1" type="simple_bool" minOccurs="1" />
+              <xs:element name="KL.MERKNAD" type="simple_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

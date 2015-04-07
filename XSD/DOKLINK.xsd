@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="DOKLINK.TAB" type="DOKLINK.TAB" />
+  <xs:complexType name="DOKLINK.TAB">
+    <xs:sequence>
+      <xs:element name="DOKLINK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DL.JPID" type="simple_int_10" minOccurs="1" />
+            <xs:element name="DL.RNR" type="simple_int_4" minOccurs="1" />
+            <xs:element name="DL.DOKID" type="simple_int_10" minOccurs="1" />
+              <xs:element name="DL.TYPE" type="simple_varchar_2" minOccurs="1" />
+              <xs:element name="DL.TKDATO" type="simple_date" minOccurs="1" />
+            <xs:element name="DL.TKAV" type="simple_int_10" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
