@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur"
+elementFormDefault="qualified">
+  <xs:simpleType name="enkel_blob">
+    <xs:restriction base="xs:hexBinary" />
+  </xs:simpleType>
+  <xs:simpleType name="enkel_bool">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0" />
+      <xs:enumeration value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enkel_date">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4}(01|02|03|04|05|06|07|08|09|10|11|12)(01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)" />
+      <xs:pattern value="[0-9]{4}-(01|02|03|04|05|06|07|08|09|10|11|12)-(01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enkel_int">
+    <xs:restriction base="xs:int" />
+  </xs:simpleType>
+  <xs:simpleType name="enkel_text">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="enkel_time">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24)(00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60)" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enkel_varchar">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+</xs:schema>
