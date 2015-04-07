@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="STDVERDI.TAB" type="STDVERDI.TAB" />
+  <xs:complexType name="STDVERDI.TAB">
+    <xs:sequence>
+      <xs:element name="STDVERDI" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SV.ADMID" type="enkel_int" minOccurs="1" />
+              <xs:element name="SV.SKTADM" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SV.TILGBEG" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SV.SSARKIV" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SV.SSSAKSBH" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SV.TGSAK" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SV.TGJP1" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SV.TGJP2" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="SV.BFRIST1" type="enkel_int" minOccurs="0" />
+            <xs:element name="SV.BFRIST2" type="enkel_int" minOccurs="0" />
+            <xs:element name="SV.BFFRIST1" type="enkel_int" minOccurs="0" />
+            <xs:element name="SV.BFFRIST2" type="enkel_int" minOccurs="0" />
+              <xs:element name="SV.ARKFAVSL" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SV.EKSTDOKTG" type="enkel_bool" minOccurs="0" />
+            <xs:element name="SV.BEVER" type="enkel_int" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

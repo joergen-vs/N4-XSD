@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="TGINFO.TAB" type="TGINFO.TAB" />
+  <xs:complexType name="TGINFO.TAB">
+    <xs:sequence>
+      <xs:element name="TGINFO" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TJ.PEID" type="enkel_int" minOccurs="1" />
+              <xs:element name="TJ.JENHET" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="TJ.ADMID" type="enkel_int" minOccurs="1" />
+            <xs:element name="TJ.AUTAV" type="enkel_int" minOccurs="1" />
+              <xs:element name="TJ.FRADATO" type="enkel_date" minOccurs="1" />
+              <xs:element name="TJ.TILDATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="TJ.AUTOPPAV" type="enkel_int" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

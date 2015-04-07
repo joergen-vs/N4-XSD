@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="EOPRESEDENS.TAB" type="EOPRESEDENS.TAB" />
+  <xs:complexType name="EOPRESEDENS.TAB">
+    <xs:sequence>
+      <xs:element name="EOPRESEDENS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="EP.PSID" type="enkel_int" minOccurs="1" />
+              <xs:element name="EP.SORDFLAGG" type="enkel_bool" minOccurs="0" />
+              <xs:element name="EP.ORD" type="enkel_varchar" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

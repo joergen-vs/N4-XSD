@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="SAKSTATUS.TAB" type="SAKSTATUS.TAB" />
+  <xs:complexType name="SAKSTATUS.TAB">
+    <xs:sequence>
+      <xs:element name="SAKSTATUS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="SS.STATUS" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SS.BETEGN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SS.MIDLERTIDIG" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SS.LUKKET" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SS.UTG" type="enkel_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

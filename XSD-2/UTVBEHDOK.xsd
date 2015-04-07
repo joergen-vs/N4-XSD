@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVBEHDOK.TAB" type="UTVBEHDOK.TAB" />
+  <xs:complexType name="UTVBEHDOK.TAB">
+    <xs:sequence>
+      <xs:element name="UTVBEHDOK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="BD.BEHID" type="enkel_int" minOccurs="1" />
+            <xs:element name="BD.DOKID" type="enkel_int" minOccurs="1" />
+              <xs:element name="BD.NDOKTYPE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="BD.STATUS" type="enkel_varchar" minOccurs="1" />
+            <xs:element name="BD.JPID" type="enkel_int" minOccurs="0" />
+              <xs:element name="BD.DOKTYPE" type="enkel_varchar" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

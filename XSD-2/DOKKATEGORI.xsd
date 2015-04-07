@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="DOKKATEGORI.TAB" type="DOKKATEGORI.TAB" />
+  <xs:complexType name="DOKKATEGORI.TAB">
+    <xs:sequence>
+      <xs:element name="DOKKATEGORI" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="DK.KODE" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="DK.BETEGN" type="enkel_varchar" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

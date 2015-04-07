@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVMOTE.TAB" type="UTVMOTE.TAB" />
+  <xs:complexType name="UTVMOTE.TAB">
+    <xs:sequence>
+      <xs:element name="UTVMOTE" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MO.ID" type="enkel_int" minOccurs="1" />
+            <xs:element name="MO.FORTS" type="enkel_int" minOccurs="0" />
+            <xs:element name="MO.NR" type="enkel_int" minOccurs="0" />
+            <xs:element name="MO.UTVID" type="enkel_int" minOccurs="1" />
+              <xs:element name="MO.LUKKET" type="enkel_bool" minOccurs="1" />
+              <xs:element name="MO.UOFF" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="MO.DATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="MO.START" type="enkel_time" minOccurs="0" />
+              <xs:element name="MO.SLUTT" type="enkel_time" minOccurs="0" />
+              <xs:element name="MO.STED" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="MO.ROM" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="MO.FRIST" type="enkel_date" minOccurs="0" />
+              <xs:element name="MO.SAKSKART" type="enkel_bool" minOccurs="0" />
+              <xs:element name="MO.PROTOKOLL" type="enkel_bool" minOccurs="0" />
+              <xs:element name="MO.MERKNAD" type="enkel_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur"
+  elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="JOURNAL" type="JOURNAL" />
+  <xs:complexType name="JOURNAL">
+    <xs:sequence>
+      <xs:element name="PRODINFO" type="JO_PRODINFO" />
+    <xs:element name="SELEKSJON" type="enkel_text" minOccurs="0" />
+      <xs:element name="SORTERING" type="enkel_text" minOccurs="0" />
+      <xs:element name="RAPPORT" type="JO_RAPPORT" />
+    </xs:sequence>
+    <xs:attribute name="VERSJON" fixed="1.0" />
+  </xs:complexType>
+  <xs:complexType name="JO_PRODINFO">
+    <xs:sequence>
+      <xs:element name="PI.ARKSKAPER" type="enkel_varchar" />
+      <xs:element name="PI.BASEID" type="enkel_int" minOccurs="0" />
+      <xs:element name="PI.ORGNR" type="enkel_int" minOccurs="0" />
+      <xs:element name="PI.KOMMUNE" type="enkel_int" minOccurs="0" />
+      <xs:element name="PI.MERKNAD" type="enkel_text" minOccurs="0" />
+      <xs:element name="PI.FRADATO" type="enkel_date" />
+      <xs:element name="PI.TILDATO" type="enkel_date" />
+      <xs:element name="PI.PRODDATO" type="enkel_date" />
+      <xs:element name="PI.ANTFILER" type="enkel_int" />
+      <xs:element name="FIL" type="JO_FIL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="JO_FIL">
+    <xs:sequence>
+      <xs:element name="PI.FILNAVN" type="enkel_varchar" />
+      <xs:element name="PI.FILDEL" type="enkel_int" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="JO_RAPPORT">
+    <xs:sequence>
+      <xs:element name="NOARKSAK.JO" type="NOARKSAK.JO" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NOARKSAK.JO">
+    <xs:sequence>
+      <xs:element name="SA.SAAR" type="enkel_int" />
+      <xs:element name="SA.SEKNR" type="enkel_int" />
+      <xs:element name="SA.PAPIR" type="enkel_bool" minOccurs="0" />
+      <xs:element name="SA.DATO" type="enkel_date" />
+      <xs:element name="SA.TITTEL" type="enkel_varchar" />
+      <xs:element name="SA.OFFTITTEL" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="SA.U1" type="enkel_bool" minOccurs="0" />
+      <xs:element name="SA.ARKDEL" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="SA.ASTATUS" type="enkel_varchar" />
+      <xs:element name="SA.JENHET" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="SA.ADMKORT" type="enkel_varchar" />
+      <xs:element name="SA.ANSVINIT" type="enkel_varchar" />
+      <xs:element name="SA.TGKODE" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="SA.UOFF" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="KLASSERING.JO" type="KLASSERING.JO" maxOccurs="unbounded" />
+      <xs:element name="JOURNPOST.JO" type="JOURNPOST.JO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="KLASSERING.JO">
+    <xs:sequence>
+      <xs:element name="KL.ORDNVERDI" type="enkel_varchar" />
+      <xs:element name="KL.SORT" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="KL.OPLTEKST" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="KL.OVBESK" type="enkel_varchar" />
+      <xs:element name="KL.U1" type="enkel_bool" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="JOURNPOST.JO">
+    <xs:sequence>
+      <xs:element name="JP.JAAR" type="enkel_int" />
+      <xs:element name="JP.SEKNR" type="enkel_int" />
+      <xs:element name="JP.POSTNR" type="enkel_int" />
+      <xs:element name="JP.JDATO" type="enkel_date" />
+      <xs:element name="JP.NDOKTYPE" type="enkel_varchar" />
+      <xs:element name="JP.DOKDATO" type="enkel_date" minOccurs="0" />
+      <xs:element name="JP.INNHOLD" type="enkel_varchar" />
+      <xs:element name="JP.OFFINNHOLD" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="JP.U1" type="enkel_bool" minOccurs="0" />
+      <xs:element name="JP.TGKODE" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="JP.UOFF" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="JP.AGDATO" type="enkel_date" minOccurs="0" />
+      <xs:element name="JP.AGKODE" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="JP.SAKSDEL" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="JP.U2" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="JP.ARKDEL" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="AVSMOT.JO" type="AVSMOT.JO" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AVSMOT.JO">
+    <xs:sequence>
+      <xs:element name="AM.NAVN" type="enkel_varchar" />
+      <xs:element name="AM.IHTYPE" type="enkel_bool" />
+      <xs:element name="AM.U1" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="AM.BEHANSV" type="enkel_bool" minOccurs="0" />
+      <xs:element name="AM.ADMKORT" type="enkel_varchar" />
+      <xs:element name="AM.SBHINIT" type="enkel_varchar" />
+      <xs:element name="AM.JENHET" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="AM.AVSKM" type="enkel_varchar" minOccurs="0" />
+      <xs:element name="AM.AVSKDATO" type="enkel_date" minOccurs="0" />
+      <xs:element name="AM.AVSAVDOK" type="enkel_int" minOccurs="0" />
+      <xs:element name="AM.BESVARDOK" type="enkel_int" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

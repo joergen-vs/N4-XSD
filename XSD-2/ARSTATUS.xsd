@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ARSTATUS.TAB" type="ARSTATUS.TAB" />
+  <xs:complexType name="ARSTATUS.TAB">
+    <xs:sequence>
+      <xs:element name="ARSTATUS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="AS.STATUS" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AS.BETEGN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AS.SPEFSAK" type="enkel_bool" minOccurs="1" />
+              <xs:element name="AS.SPEFDOK" type="enkel_bool" minOccurs="1" />
+              <xs:element name="AS.LUKKET" type="enkel_bool" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

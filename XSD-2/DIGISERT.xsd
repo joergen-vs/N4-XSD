@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="DIGISERT.TAB" type="DIGISERT.TAB" />
+  <xs:complexType name="DIGISERT.TAB">
+    <xs:sequence>
+      <xs:element name="DIGISERT" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SE.ID" type="enkel_int" minOccurs="1" />
+            <xs:element name="SE.ADRID" type="enkel_int" minOccurs="0" />
+              <xs:element name="SE.NAVN" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SE.EPOST" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SE.TTPEPOST" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SE.FRADATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="SE.TILDATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="SE.VERAV" type="enkel_int" minOccurs="0" />
+              <xs:element name="SE.VERDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="SE.SIGNTEKST" type="enkel_text" minOccurs="0" />
+              <xs:element name="SE.SERT" type="enkel_blob" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

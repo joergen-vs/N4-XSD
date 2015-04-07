@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVSAKSKART.TAB" type="UTVSAKSKART.TAB" />
+  <xs:complexType name="UTVSAKSKART.TAB">
+    <xs:sequence>
+      <xs:element name="UTVSAKSKART" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SK.UTVID" type="enkel_int" minOccurs="1" />
+              <xs:element name="SK.SAKSTYPE" type="enkel_varchar" minOccurs="1" />
+            <xs:element name="SK.SORT" type="enkel_int" minOccurs="0" />
+              <xs:element name="SK.TITTEL" type="enkel_text" minOccurs="0" />
+            <xs:element name="SK.NUMSER" type="enkel_int" minOccurs="0" />
+              <xs:element name="SK.NUMFORM" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SK.OVSKR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.KUNOVSKR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.UTVSNR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.ARKSNR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.ARKSDNR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.DOKIH" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.DOKDATO" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SK.AVS" type="enkel_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

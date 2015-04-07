@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="MERKNAD.TAB" type="MERKNAD.TAB" />
+  <xs:complexType name="MERKNAD.TAB">
+    <xs:sequence>
+      <xs:element name="MERKNAD" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ME.ID" type="enkel_int" minOccurs="1" />
+            <xs:element name="ME.SAID" type="enkel_int" minOccurs="0" />
+            <xs:element name="ME.JPID" type="enkel_int" minOccurs="0" />
+            <xs:element name="ME.DOKID" type="enkel_int" minOccurs="0" />
+            <xs:element name="ME.DOKVER" type="enkel_int" minOccurs="0" />
+              <xs:element name="ME.VARIANT" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="ME.RNR" type="enkel_int" minOccurs="0" />
+              <xs:element name="ME.ITYPE" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="ME.TGKODE" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="ME.TGGRUPPE" type="enkel_int" minOccurs="0" />
+              <xs:element name="ME.OPPBEDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="ME.REGDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="ME.REGKL" type="enkel_time" minOccurs="0" />
+            <xs:element name="ME.REGAV" type="enkel_int" minOccurs="1" />
+            <xs:element name="ME.PVGAV" type="enkel_int" minOccurs="1" />
+              <xs:element name="ME.TEKST" type="enkel_text" minOccurs="0" />
+            <xs:element name="ME.REFDOKID" type="enkel_int" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

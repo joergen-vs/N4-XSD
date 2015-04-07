@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="NOARKSAK.TAB" type="NOARKSAK.TAB" />
+  <xs:complexType name="NOARKSAK.TAB">
+    <xs:sequence>
+      <xs:element name="NOARKSAK" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SA.ID" type="enkel_int" minOccurs="1" />
+            <xs:element name="SA.SAAR" type="enkel_int" minOccurs="1" />
+            <xs:element name="SA.SEKNR" type="enkel_int" minOccurs="1" />
+              <xs:element name="SA.PAPIR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="SA.DATO" type="enkel_date" minOccurs="1" />
+              <xs:element name="SA.TITTEL" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SA.U1" type="enkel_bool" minOccurs="1" />
+              <xs:element name="SA.STATUS" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SA.ARKDEL" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SA.TYPE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.JENHET" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.OPSAKSDEL" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="SA.ADMID" type="enkel_int" minOccurs="1" />
+            <xs:element name="SA.ANSVID" type="enkel_int" minOccurs="1" />
+              <xs:element name="SA.TGKODE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.UOFF" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="SA.TGGRUPPE" type="enkel_int" minOccurs="0" />
+              <xs:element name="SA.SISTEJP" type="enkel_date" minOccurs="0" />
+            <xs:element name="SA.ANTJP" type="enkel_int" minOccurs="1" />
+            <xs:element name="SA.BEVTID" type="enkel_int" minOccurs="0" />
+              <xs:element name="SA.KASSKODE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.KASSDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="SA.PROSJEKT" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.PRES" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.OBS" type="enkel_date" minOccurs="0" />
+              <xs:element name="SA.FRARKDEL" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SA.UTLDATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="SA.UTLTIL" type="enkel_int" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

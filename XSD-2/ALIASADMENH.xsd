@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ALIASADMENH.TAB" type="ALIASADMENH.TAB" />
+  <xs:complexType name="ALIASADMENH.TAB">
+    <xs:sequence>
+      <xs:element name="ALIASADMENH" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AL.ADMIDFRA" type="enkel_int" minOccurs="1" />
+            <xs:element name="AL.ADMIDTIL" type="enkel_int" minOccurs="1" />
+              <xs:element name="AL.MERKNAD" type="enkel_text" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

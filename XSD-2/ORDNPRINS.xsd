@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ORDNPRINS.TAB" type="ORDNPRINS.TAB" />
+  <xs:complexType name="ORDNPRINS.TAB">
+    <xs:sequence>
+      <xs:element name="ORDNPRINS" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="OP.ORDNPRI" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="OP.BETEGN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="OP.LTEKST" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="OP.TYPE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="OP.OVBESK" type="enkel_bool" minOccurs="1" />
+              <xs:element name="OP.KLFLAGG" type="enkel_bool" minOccurs="1" />
+              <xs:element name="OP.SIFLAGG" type="enkel_bool" minOccurs="1" />
+              <xs:element name="OP.EVOK" type="enkel_bool" minOccurs="1" />
+              <xs:element name="OP.EVAUTO" type="enkel_bool" minOccurs="1" />
+              <xs:element name="OP.SEKFLAGG" type="enkel_bool" minOccurs="1" />
+              <xs:element name="OP.SEKNOK" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="OP.FRADATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="OP.TILDATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="OP.MAKSLEN" type="enkel_int" minOccurs="0" />
+              <xs:element name="OP.TGKODE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="OP.MERKNAD" type="enkel_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="SAKSPART.TAB" type="SAKSPART.TAB" />
+  <xs:complexType name="SAKSPART.TAB">
+    <xs:sequence>
+      <xs:element name="SAKSPART" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SP.SAID" type="enkel_int" minOccurs="1" />
+              <xs:element name="SP.U1" type="enkel_bool" minOccurs="1" />
+              <xs:element name="SP.KORTNAVN" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.NAVN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SP.ADRESSE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.POSTNR" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.POSTSTED" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.UTLAND" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.EPOSTADR" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.KONTAKT" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.ROLLE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.FAKS" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.TLF" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="SP.MERKNAD" type="enkel_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

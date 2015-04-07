@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="PERKLARER.TAB" type="PERKLARER.TAB" />
+  <xs:complexType name="PERKLARER.TAB">
+    <xs:sequence>
+      <xs:element name="PERKLARER" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="KT.PEID" type="enkel_int" minOccurs="1" />
+              <xs:element name="KT.TGKODE" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="KT.AUTHELE" type="enkel_bool" minOccurs="1" />
+            <xs:element name="KT.KLAV" type="enkel_int" minOccurs="1" />
+              <xs:element name="KT.FRADATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="KT.KLOPPHAV" type="enkel_int" minOccurs="0" />
+              <xs:element name="KT.TILDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="KT.MERKNAD" type="enkel_text" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

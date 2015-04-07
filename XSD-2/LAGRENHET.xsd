@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="LAGRENHET.TAB" type="LAGRENHET.TAB" />
+  <xs:complexType name="LAGRENHET.TAB">
+    <xs:sequence>
+      <xs:element name="LAGRENHET" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="LA.KODE" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="LA.BESKRIV" type="enkel_varchar" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVBEHSTAT.TAB" type="UTVBEHSTAT.TAB" />
+  <xs:complexType name="UTVBEHSTAT.TAB">
+    <xs:sequence>
+      <xs:element name="UTVBEHSTAT" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="BS.STATUS" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="BS.BETEGN" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="BS.KOLOSTE" type="enkel_bool" minOccurs="0" />
+              <xs:element name="BS.KANSKART" type="enkel_bool" minOccurs="0" />
+              <xs:element name="BS.SAKSKART" type="enkel_bool" minOccurs="0" />
+              <xs:element name="BS.BEHANDLET" type="enkel_bool" minOccurs="0" />
+            <xs:element name="BS.SROT1" type="enkel_int" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

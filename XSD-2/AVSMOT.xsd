@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="AVSMOT.TAB" type="AVSMOT.TAB" />
+  <xs:complexType name="AVSMOT.TAB">
+    <xs:sequence>
+      <xs:element name="AVSMOT" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AM.ID" type="enkel_int" minOccurs="1" />
+            <xs:element name="AM.JPID" type="enkel_int" minOccurs="1" />
+              <xs:element name="AM.IHTYPE" type="enkel_bool" minOccurs="1" />
+              <xs:element name="AM.KOPIMOT" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AM.BEHANSV" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AM.NAVN" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.GRUPPEMOT" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AM.GRUPPE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.U1" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AM.KORTNAVN" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.ADRESSE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.POSTNR" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.POSTSTED" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.UTLAND" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.EPOSTADR" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.REF" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="AM.ADMID" type="enkel_int" minOccurs="1" />
+            <xs:element name="AM.SBHID" type="enkel_int" minOccurs="1" />
+              <xs:element name="AM.JENHET" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.AVSKM" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="AM.AVSKAV" type="enkel_int" minOccurs="0" />
+              <xs:element name="AM.AVSKDATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="AM.BESVAR" type="enkel_int" minOccurs="0" />
+              <xs:element name="AM.FRIST" type="enkel_date" minOccurs="0" />
+              <xs:element name="AM.FORSEND" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AM.FSSTATUS" type="enkel_varchar" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ARKIVDEL.TAB" type="ARKIVDEL.TAB" />
+  <xs:complexType name="ARKIVDEL.TAB">
+    <xs:sequence>
+      <xs:element name="ARKIVDEL" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="AD.ARKDEL" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AD.BETEGN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AD.ARKIV" type="enkel_varchar" minOccurs="1" />
+            <xs:element name="AD.PERIODE" type="enkel_int" minOccurs="0" />
+              <xs:element name="AD.ASTATUS" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AD.PRIMNOK" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AD.SPEFSAK" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AD.SPEFDOK" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AD.LUKKET" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AD.BSPRINS" type="enkel_text" minOccurs="0" />
+              <xs:element name="AD.BSKODE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AD.FORTS" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AD.PAPIR" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AD.ELDOK" type="enkel_bool" minOccurs="0" />
+            <xs:element name="AD.NUMSER" type="enkel_int" minOccurs="0" />
+              <xs:element name="AD.PRIMKOD" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AD.SEKNOK" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AD.FRISEK" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AD.RPGRUPPE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AD.FRADATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="AD.TILDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="AD.LOK" type="enkel_text" minOccurs="0" />
+              <xs:element name="AD.MERKNAD" type="enkel_text" minOccurs="0" />
+              <xs:element name="AD.RAPUTV" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AD.EKSPDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="AD.KONTRDATO" type="enkel_date" minOccurs="0" />
+            <xs:element name="AD.KONTRAV" type="enkel_int" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

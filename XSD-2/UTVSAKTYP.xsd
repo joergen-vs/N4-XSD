@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="UTVSAKTYP.TAB" type="UTVSAKTYP.TAB" />
+  <xs:complexType name="UTVSAKTYP.TAB">
+    <xs:sequence>
+      <xs:element name="UTVSAKTYP" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="SU.KODE" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="SU.BETEGN" type="enkel_varchar" minOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

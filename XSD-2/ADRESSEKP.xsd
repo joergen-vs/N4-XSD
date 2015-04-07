@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
+  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:element name="ADRESSEKP.TAB" type="ADRESSEKP.TAB" />
+  <xs:complexType name="ADRESSEKP.TAB">
+    <xs:sequence>
+      <xs:element name="ADRESSEKP" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AK.ADRID" type="enkel_int" minOccurs="1" />
+            <xs:element name="AK.OVERORD" type="enkel_int" minOccurs="0" />
+              <xs:element name="AK.TYPE" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.ADRGRUPPE" type="enkel_bool" minOccurs="0" />
+              <xs:element name="AK.KORTNAVN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AK.NAVN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="AK.POSTADR" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.POSTNR" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.POSTSTED" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.UTLAND" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.EPOST" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.FAKS" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.TLF" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.MOBIL" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.PERSOK" type="enkel_varchar" minOccurs="0" />
+              <xs:element name="AK.TILDATO" type="enkel_date" minOccurs="0" />
+              <xs:element name="AK.ORGNR" type="enkel_varchar" minOccurs="0" />
+            <xs:element name="AK.TGGRUPPE" type="enkel_int" minOccurs="0" />
+            <xs:element name="AK.OPDGRUPPE" type="enkel_int" minOccurs="0" />
+            <xs:element name="AK.BASEID" type="enkel_int" minOccurs="0" />
+              <xs:element name="AK.REGEPOST" type="enkel_bool" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
