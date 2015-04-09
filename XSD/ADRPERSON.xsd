@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
-  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:include schemaLocation="METADATA.XSD" />
   <xs:element name="ADRPERSON.TAB" type="ADRPERSON.TAB" />
   <xs:complexType name="ADRPERSON.TAB">
     <xs:sequence>
@@ -13,5 +13,6 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
+    <xs:attribute name="VERSJON" fixed="1.0" />
   </xs:complexType>
 </xs:schema>

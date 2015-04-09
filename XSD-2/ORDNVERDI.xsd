@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
-  <xs:include schemaLocation="METADATA.xsd" />
+  <xs:include schemaLocation="METADATA.XSD" />
   <xs:element name="ORDNVERDI.TAB" type="ORDNVERDI.TAB" />
   <xs:complexType name="ORDNVERDI.TAB">
     <xs:sequence>
@@ -10,7 +10,7 @@
               <xs:element name="OV.ORDNPRI" type="enkel_varchar" minOccurs="1" />
               <xs:element name="OV.ORDNVER" type="enkel_varchar" minOccurs="1" />
               <xs:element name="OV.FAR" type="enkel_varchar" minOccurs="0" />
-              <xs:element name="OV.BESKR" type="enkel_text" minOccurs="0" />
+              <xs:element name="OV.BESKRIV" type="enkel_text" minOccurs="0" />
               <xs:element name="OV.REGFLAGG" type="enkel_bool" minOccurs="1" />
               <xs:element name="OV.SEKFLAGG" type="enkel_bool" minOccurs="1" />
               <xs:element name="OV.SEKNOK" type="enkel_varchar" minOccurs="0" />
@@ -23,5 +23,6 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
+    <xs:attribute name="VERSJON" fixed="1.0" />
   </xs:complexType>
 </xs:schema>

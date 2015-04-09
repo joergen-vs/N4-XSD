@@ -4,13 +4,10 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema"
 targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur"
 elementFormDefault="qualified">
   <xs:simpleType name="enkel_blob">
-    <xs:restriction base="xs:hexBinary" />
+    <xs:restriction base="xs:base64Binary" />
   </xs:simpleType>
   <xs:simpleType name="enkel_bool">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="0" />
-      <xs:enumeration value="1" />
-    </xs:restriction>
+    <xs:restriction base="xs:boolean" />
   </xs:simpleType>
   <xs:simpleType name="enkel_date">
     <xs:restriction base="xs:string">
