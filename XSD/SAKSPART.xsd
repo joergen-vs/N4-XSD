@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
-  <xs:include schemaLocation="METADATA.XSD" />
+  <xs:include schemaLocation="METADATA.xsd" />
   <xs:element name="SAKSPART.TAB" type="SAKSPART.TAB" />
   <xs:complexType name="SAKSPART.TAB">
     <xs:sequence>
@@ -25,6 +25,5 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="VERSJON" fixed="1.0" />
   </xs:complexType>
 </xs:schema>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns="http://www.arkivverket.no/standarder/noark4/arkivstruktur" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.arkivverket.no/standarder/noark4/arkivstruktur" elementFormDefault="qualified">
-  <xs:include schemaLocation="METADATA.XSD" />
+  <xs:include schemaLocation="METADATA.xsd" />
   <xs:element name="TGGRUPPE.TAB" type="TGGRUPPE.TAB" />
   <xs:complexType name="TGGRUPPE.TAB">
     <xs:sequence>
@@ -8,7 +8,7 @@
         <xs:complexType>
           <xs:sequence>
             <xs:element name="TG.GRUPPEID" type="enkel_int" minOccurs="1" />
-              <xs:element name="TG.GRUPPENAVN" type="enkel_varchar" minOccurs="1" />
+              <xs:element name="TG.GRUPPNAVN" type="enkel_varchar" minOccurs="1" />
               <xs:element name="TG.GENERELL" type="enkel_bool" minOccurs="1" />
             <xs:element name="TG.OPPRAV" type="enkel_int" minOccurs="1" />
               <xs:element name="TG.FRADATO" type="enkel_date" minOccurs="1" />
@@ -17,6 +17,5 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="VERSJON" fixed="1.0" />
   </xs:complexType>
 </xs:schema>
